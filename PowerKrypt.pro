@@ -26,12 +26,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    about.cpp
+    about.cpp \
+    keygen.cpp \
+    modal.cpp
 
 HEADERS += \
         mainwindow.h \
-    about.h
+    about.h \
+    keygen.h \
+    modal.h
 
 FORMS += \
         mainwindow.ui \
-    about.ui
+    about.ui \
+    keygen.ui \
+    modal.ui

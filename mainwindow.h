@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include <QMap>
+#include "keygen.h"
+
+#define RECENTFILES     "recentFiles"
+#define RECENTKEYS      "recentKeys"
 
 namespace Ui {
 class MainWindow;
@@ -17,10 +21,12 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_3_clicked();
     void on_actionAbout_triggered();
+    void on_keyGenButton_clicked();
+    void on_browseFileButton_clicked();
 
 private:
+    KeyGenerator m_KeyGenerator;
     Ui::MainWindow *ui;
     void LoadSettings();
     void SaveSettings();
@@ -48,7 +54,6 @@ private:
      **/
 
     bool CheckFileExists(const QString &path);
-    void GenerateRandomKey(const QString &keyPath);
 };
 
 #endif // MAINWINDOW_H
